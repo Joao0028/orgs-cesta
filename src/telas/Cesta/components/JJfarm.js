@@ -1,6 +1,5 @@
 import { View, Image, StyleSheet } from "react-native";
 import Texto from "../../../components/Texto";
-import imagemJJFarm from "../../../../assets/logo.png";
 import { cesta } from "../../../mocks/cesta";
 
 export default function JJfarm() {
