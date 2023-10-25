@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, Dimensions, View } from "react-native";
 import imagemCapa from "../../assets/topo.png";
 import imagemJJFarm from "../../assets/logo.png";
+import Texto from "../Texto";
 const dimensaoTela = Dimensions.get("screen").width;
 
 export default function Cesta() {
@@ -8,18 +9,18 @@ export default function Cesta() {
     <>
       <View style={estilos.containerPai}>
         <Image source={imagemCapa} style={estilos.capa} />
-        <Text style={estilos.titulo}>Detalhe da cesta</Text>
+        <Texto style={estilos.titulo}>Detalhe da cesta</Texto>
         <View style={estilos.cesta}>
-          <Text style={estilos.nome}>Cesta de verduras</Text>
+          <Texto style={estilos.nome}>Cesta de verduras</Texto>
           <View style={estilos.containerJJFarm}>
             <Image source={imagemJJFarm} style={estilos.imagemJJFarm} />
-            <Text style={estilos.nomeFazenda}>Jannie Jacke Farm</Text>
+            <Texto style={estilos.nomeFazenda}>Jannie Jacke Farm</Texto>
           </View>
-          <Text style={estilos.descricao}>
-            Uma cesta com produtos selecionados cuidadosamnete da fazenda direto
+          <Texto style={estilos.descricao}>
+          Uma cesta com produtos selecionados cuidadosamnete da fazenda direto
             para sua cozinha.
-          </Text>
-          <Text style={estilos.preço}>R$ 40,00</Text>
+          </Texto>
+          <Texto style={estilos.preço}>R$ 40,00</Texto>
         </View>
       </View>
     </>
@@ -49,7 +50,7 @@ const estilos = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     color: "#464646",
-    fontFamily: "MonstserratBold"
+    fontWeight: "bold"
   },
   nomeFazenda: {
     fontSize: 16,
