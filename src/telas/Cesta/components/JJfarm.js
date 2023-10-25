@@ -1,6 +1,7 @@
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Texto from "../../../components/Texto";
 import { cesta } from "../../../mocks/cesta";
+import Botao from "../../../components/Botao";
 
 export default function JJfarm() {
   return (
@@ -12,6 +13,7 @@ export default function JJfarm() {
       </View>
       <Texto style={estilos.descricao}>{cesta.detalhes.descricao}</Texto>
       <Texto style={estilos.preço}>{cesta.detalhes.preco}</Texto>
+      <Botao textoBotao={cesta.detalhes.botao}/>
     </>
   );
 }
