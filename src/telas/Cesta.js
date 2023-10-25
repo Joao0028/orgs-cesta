@@ -1,24 +1,26 @@
 import { Image, StyleSheet, Text, Dimensions, View } from "react-native";
 import imagemCapa from "../../assets/topo.png";
-import imagemJJFarm from "../../assets/logo.png"
-
+import imagemJJFarm from "../../assets/logo.png";
 const dimensaoTela = Dimensions.get("screen").width;
 
 export default function Cesta() {
   return (
     <>
-      <Image source={imagemCapa} style={estilos.capa} />
-      <Text style={estilos.titulo}>Detalhe da cesta</Text>
-      <View style={estilos.cesta}>
-        <Text style={estilos.nome}>Cesta de verduras</Text>
-        <View style={estilos.containerJJFarm}>
-          <Image source={imagemJJFarm} style={estilos.imagemJJFarm}/>
-          <Text style={estilos.nomeFazenda}>Jannie Jacke Farm</Text>
+      <View style={estilos.containerPai}>
+        <Image source={imagemCapa} style={estilos.capa} />
+        <Text style={estilos.titulo}>Detalhe da cesta</Text>
+        <View style={estilos.cesta}>
+          <Text style={estilos.nome}>Cesta de verduras</Text>
+          <View style={estilos.containerJJFarm}>
+            <Image source={imagemJJFarm} style={estilos.imagemJJFarm} />
+            <Text style={estilos.nomeFazenda}>Jannie Jacke Farm</Text>
+          </View>
+          <Text style={estilos.descricao}>
+            Uma cesta com produtos selecionados cuidadosamnete da fazenda direto
+            para sua cozinha.
+          </Text>
+          <Text style={estilos.preço}>R$ 40,00</Text>
         </View>
-        <Text style={estilos.descricao}>
-          Uma cesta com produtos selecionados cuidadosamnete da fazenda direto para sua cozinha.
-        </Text>
-        <Text style={estilos.preço}>R$ 40,00</Text>
       </View>
     </>
   );
@@ -47,12 +49,12 @@ const estilos = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     color: "#464646",
-    fontWeight: "bold",
+    fontFamily: "MonstserratBold"
   },
   nomeFazenda: {
     fontSize: 16,
     lineHeight: 26,
-    paddingLeft: 12
+    paddingLeft: 12,
   },
   descricao: {
     color: "#a3a3a3",
@@ -67,13 +69,12 @@ const estilos = StyleSheet.create({
     marginTop: 8,
   },
 
-
-  containerJJFarm:{
+  containerJJFarm: {
     flexDirection: "row",
-    paddingVertical: 12
+    paddingVertical: 12,
   },
   imagemJJFarm: {
     width: 32,
     height: 32,
-  }
+  },
 });
