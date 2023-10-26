@@ -1,14 +1,18 @@
-import {  StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import Topo from "./components/Topo";
 import JJfarm from "./components/JJfarm";
+import Itens from "./components/Itens";
 
 export default function Cesta() {
   return (
     <>
-      <Topo />
-      <View style={estilos.cesta}>
-        <JJfarm />
-      </View>
+      <ScrollView>
+        <Topo />
+        <View style={estilos.cesta}>
+          <JJfarm />
+          <Itens />
+        </View>
+      </ScrollView>
     </>
   );
 }
